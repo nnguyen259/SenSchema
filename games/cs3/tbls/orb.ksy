@@ -3,30 +3,9 @@ meta:
   endian: le
   encoding: UTF-8
   imports:
-    - ../../headers/cs3
-    - ../../enums/common
-    - ../../enums/cs3
-seq:
-  - id: header
-    type: cs3
-  - id: entries
-    type: entry
-    repeat: expr
-    repeat-expr: header.info.num_entry
+    - ../../../enums/common
+    - ../../../enums/cs3
 types:
-  entry:
-    seq:
-      - id: header_name
-        type: strz
-      - id: length
-        type: u2
-      - id: data
-        type:
-         switch-on: header_name
-         cases:
-           '"BaseList"': base_list
-           '"OrbLineList"': orb_line_list
-        size: length
   base_list:
     seq:
       - id: character_id
