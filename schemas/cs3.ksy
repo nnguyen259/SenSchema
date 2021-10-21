@@ -6,6 +6,7 @@ meta:
     - headers
     - tbl_cs3_mstqrt
     - tbl_cs3_orb
+    - tbl_cs3_slot
 seq:
   - id: header
     type: headers::header
@@ -33,4 +34,7 @@ types:
             # ORB
             '"BaseList"': t_orb::base_list
             '"OrbLineList"': t_orb::orb_line_list
+            # SLOT
+            '"SlotEp"': t_slot::slot_ep
+            '"SlotCost"': t_slot::slot_cost
         size: length
