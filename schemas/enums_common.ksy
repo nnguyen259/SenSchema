@@ -1,5 +1,5 @@
 meta:
-  id: common_enum
+  id: enums_common
 enums:
   elements:
     0: no_element

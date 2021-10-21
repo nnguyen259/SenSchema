@@ -1,5 +1,5 @@
 meta:
-  id: cs3_enum
+  id: enums_cs3
 enums:
   characters:
     0: rean

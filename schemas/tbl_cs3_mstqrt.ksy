@@ -2,9 +2,6 @@ meta:
   id: t_mstqrt
   endian: le
   encoding: UTF-8
-  imports:
-    - ../../../enums/common
-    - ../../../enums/cs3
 types:
   master_quartz_status:
     seq:
