@@ -1,40 +1,17 @@
 meta:
-  id: cs3_tbl
+  id: cs3
   endian: le
   encoding: UTF-8
   imports:
-    - headers
-    - tbl_cs3_mstqrt
-    - tbl_cs3_orb
-    - tbl_cs3_slot
+    - headers/header_base
+    - headers/header_extend
+    - cs3/tbl/entry
 seq:
   - id: header
-    type: headers::header
+    type: header_base
+  - id: header_extra
+    type: header_extend
   - id: entries
-    type: entry
+    type: cs3_tbl_entry
     repeat: expr
-    repeat-expr: header.info.num_entry
-types:
-  entry:
-    seq:
-      - id: header_name
-        type: strz
-      - id: length
-        type: u2
-      - id: data
-        type:
-          switch-on: header_name
-          cases:
-            # MSTQRT
-            '"MasterQuartzStatus"': t_mstqrt::master_quartz_status
-            '"MasterQuartzBase"': t_mstqrt::master_quartz_base
-            '"MasterQuartzData"': t_mstqrt::master_quartz_data
-            '"MasterQuartzMemo"': t_mstqrt::master_quartz_memo
-            '"MasterQuartzDummy"': t_mstqrt::master_quartz_dummy
-            # ORB
-            '"BaseList"': t_orb::base_list
-            '"OrbLineList"': t_orb::orb_line_list
-            # SLOT
-            '"SlotEp"': t_slot::slot_ep
-            '"SlotCost"': t_slot::slot_cost
-        size: length
+    repeat-expr: header.num_entry
