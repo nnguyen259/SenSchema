@@ -1,5 +1,10 @@
 meta:
-  id: enums_cs3
+  id: character
+  endian: le
+seq:
+  - id: character_id
+    type: u2
+    enum: characters
 enums:
   characters:
     0: rean

@@ -1,5 +1,10 @@
 meta:
-  id: enums_common
+  id: element
+  endian: le
+seq:
+  - id: element_id
+    type: u2
+    enum: elements
 enums:
   elements:
     0: no_element

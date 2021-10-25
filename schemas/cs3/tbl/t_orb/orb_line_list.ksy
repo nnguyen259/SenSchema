@@ -1,9 +1,11 @@
 meta:
   id: orb_line_list
   endian: le
+  imports:
+    - /components/cs3/character
 seq:
   - id: character_id
-    type: u2
+    type: character
   - id: line_id
     type: u2
   - id: slot1_id

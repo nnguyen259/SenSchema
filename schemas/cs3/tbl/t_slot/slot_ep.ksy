@@ -1,9 +1,11 @@
 meta:
   id: slot_ep
   endian: le
+  imports:
+    - /components/cs3/character
 seq:
   - id: character_id
-    type: u2
+    type: character
   - id: slot_level
     type: u2
   - id: base_ep
