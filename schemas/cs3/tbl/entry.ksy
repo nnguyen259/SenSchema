@@ -12,6 +12,8 @@ meta:
     # ORB
     - t_orb/base_list
     - t_orb/orb_line_list
+    # QU_COST
+    - t_qu_cost/quartz_cost
     # SLOT
     - t_slot/slot_ep
     - t_slot/slot_cost
@@ -33,6 +35,8 @@ seq:
         # ORB
         '"BaseList"': base_list
         '"OrbLineList"': orb_line_list
+        # QU_COST
+        '"QuartzCost"': quartz_cost
         # SLOT
         "'SlotEp'": slot_ep
         "'SlotCost'": slot_cost
