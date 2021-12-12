@@ -9,6 +9,9 @@ meta:
     - t_mstqrt/master_quartz_dummy
     - t_mstqrt/master_quartz_memo
     - t_mstqrt/master_quartz_status
+    # NOTEMONS
+    - t_notemons/qschapter
+    - t_notemons/qsmons
     # ORB
     - t_orb/base_list
     - t_orb/orb_line_list
@@ -32,6 +35,9 @@ seq:
         '"MasterQuartzData"': master_quartz_data
         '"MasterQuartzMemo"': master_quartz_memo
         '"MasterQuartzDummy"': master_quartz_dummy
+        # NOTEMONS
+        '"QSChapter"': qschapter
+        '"QSMons"': qsmons
         # ORB
         '"BaseList"': base_list
         '"OrbLineList"': orb_line_list
