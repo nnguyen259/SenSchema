@@ -1,6 +1,12 @@
 meta:
   id: master_quartz_base
   endian: le
+doc: |
+  Master quartz stats.
+
+  Stat patterns refer to values defined under the MasterQuartzStatus header.
+
+  Present in t_mstqrt.tbl.
 seq:
   - id: item_id
     type: u2

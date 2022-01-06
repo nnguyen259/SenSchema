@@ -1,6 +1,10 @@
 meta:
   id: slot_cost
   endian: le
+doc: |
+  Cost to unlock orbment slots.
+
+  Present in t_slot.tbl.
 seq:
   - id: unlock_position
     type: u2

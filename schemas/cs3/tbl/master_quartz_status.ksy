@@ -1,6 +1,10 @@
 meta:
   id: master_quartz_status
   endian: le
+doc: |
+  Master quartz stat values.
+
+  Present in t_mstqrt.tbl.
 seq:
   - id: pattern_id
     type: u1

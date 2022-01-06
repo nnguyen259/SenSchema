@@ -1,7 +1,12 @@
 meta:
-  id: qsmons # QSMons
+  id: qs_mons # QSMons
   endian: le
   encoding: UTF-8
+doc: |
+  Monster notebook entries.
+  Stats are taken from t_status.tbl.
+
+  Present in t_notemons.tbl.
 seq:
   - id: enemy_script
     type: strz

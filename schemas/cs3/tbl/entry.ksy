@@ -3,23 +3,18 @@ meta:
   endian: le
   encoding: UTF-8
   imports:
-    # MSTQRT
-    - t_mstqrt/master_quartz_base
-    - t_mstqrt/master_quartz_data
-    - t_mstqrt/master_quartz_dummy
-    - t_mstqrt/master_quartz_memo
-    - t_mstqrt/master_quartz_status
-    # NOTEMONS
-    - t_notemons/qschapter
-    - t_notemons/qsmons
-    # ORB
-    - t_orb/base_list
-    - t_orb/orb_line_list
-    # QU_COST
-    - t_qu_cost/quartz_cost
-    # SLOT
-    - t_slot/slot_ep
-    - t_slot/slot_cost
+    - base_list
+    - master_quartz_base
+    - master_quartz_data
+    - master_quartz_dummy
+    - master_quartz_memo
+    - master_quartz_status
+    - orb_line_list
+    - quartz_cost
+    - qs_chapter
+    - qs_mons
+    - slot_cost
+    - slot_ep
 seq:
   - id: header_name
     type: strz
@@ -29,24 +24,18 @@ seq:
     type:
       switch-on: header_name
       cases:
-        # MSTQRT
-        '"MasterQuartzStatus"': master_quartz_status
+        '"BaseList"': base_list
         '"MasterQuartzBase"': master_quartz_base
         '"MasterQuartzData"': master_quartz_data
-        '"MasterQuartzMemo"': master_quartz_memo
         '"MasterQuartzDummy"': master_quartz_dummy
-        # NOTEMONS
-        '"QSChapter"': qschapter
-        '"QSMons"': qsmons
-        # ORB
-        '"BaseList"': base_list
+        '"MasterQuartzMemo"': master_quartz_memo
+        '"MasterQuartzStatus"': master_quartz_status
         '"OrbLineList"': orb_line_list
-        # QU_COST
         '"QuartzCost"': quartz_cost
-        # SLOT
-        "'SlotEp'": slot_ep
+        '"QSChapter"': qs_chapter
+        '"QSMons"': qs_mons
         "'SlotCost'": slot_cost
-        # Other
+        "'SlotEp'": slot_ep
         _: generic
 types:
   generic:

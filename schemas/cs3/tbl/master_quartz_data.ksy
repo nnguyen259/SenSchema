@@ -1,6 +1,10 @@
 meta:
   id: master_quartz_data
   endian: le
+doc: |
+  Master quartz effect strengths, arts, and descriptions.
+
+  Present in t_mstqrt.tbl.
 seq:
   - id: item_id
     type: u2
