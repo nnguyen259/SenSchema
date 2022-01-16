@@ -1,6 +1,10 @@
 meta:
   id: quartz_cost
   endian: le
+doc: |
+  Quartz synthesis cost.
+
+  Present in t_qu_cost.tbl.
 seq:
   - id: quartz_id
     type: u2

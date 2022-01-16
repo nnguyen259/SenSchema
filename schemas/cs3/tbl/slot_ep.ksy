@@ -3,6 +3,10 @@ meta:
   endian: le
   imports:
     - /components/cs3/character
+doc: |
+  Amount of EP gained by unlocking a slot.
+
+  Present in t_slot.tbl.
 seq:
   - id: character_id
     type: character

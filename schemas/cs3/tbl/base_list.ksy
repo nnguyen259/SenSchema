@@ -4,6 +4,10 @@ meta:
   imports:
     - /components/cs3/character
     - /components/common/element
+doc: |
+  Orbment layout: lines and slot restrictions.
+
+  Present in t_orb.tbl.
 seq:
   - id: character_id
     type: character
