@@ -5,8 +5,10 @@ meta:
   imports:
     - base_list
     - char_revise
+    - comp_help_data
     - game_difficulty
     - item
+    - item_help_data
     - item_q
     - master_quartz_base
     - master_quartz_data
@@ -33,8 +35,10 @@ seq:
       cases:
         '"BaseList"': base_list
         '"char_revise"': char_revise
+        '"CompHelpData"': comp_help_data
         '"game_difficulty"': game_difficulty
         '"item"': item
+        '"ItemHelpData"': item_help_data
         '"item_q"': item_q
         '"MasterQuartzBase"': master_quartz_base
         '"MasterQuartzData"': master_quartz_data

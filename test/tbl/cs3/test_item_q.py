@@ -26,23 +26,23 @@ class TestCS3ItemQ(unittest.TestCase):
         self.assertEqual(entry.data.rating, 2.0)
         self.assertEqual(entry.data.unknown_byte_1, 1)
         self.assertEqual(
-            entry.data.effects[0].effect_id, cs3tbl.Effect.EffectType.debuff_mov
+            entry.data.effects[0].type.type_id, cs3tbl.EffectType.EffectTypes.debuff_mov
         )
         self.assertEqual(entry.data.effects[0].data, [999992, 0, 40])
         self.assertEqual(
-            entry.data.effects[1].effect_id, cs3tbl.Effect.EffectType.no_effect
+            entry.data.effects[1].type.type_id, cs3tbl.EffectType.EffectTypes.no_effect
         )
         self.assertEqual(entry.data.effects[1].data, [0, 0, 0])
         self.assertEqual(
-            entry.data.effects[2].effect_id, cs3tbl.Effect.EffectType.no_effect
+            entry.data.effects[2].type.type_id, cs3tbl.EffectType.EffectTypes.no_effect
         )
         self.assertEqual(entry.data.effects[2].data, [0, 0, 0])
         self.assertEqual(
-            entry.data.effects[3].effect_id, cs3tbl.Effect.EffectType.no_effect
+            entry.data.effects[3].type.type_id, cs3tbl.EffectType.EffectTypes.no_effect
         )
         self.assertEqual(entry.data.effects[3].data, [0, 0, 0])
         self.assertEqual(
-            entry.data.effects[4].effect_id, cs3tbl.Effect.EffectType.no_effect
+            entry.data.effects[4].type.type_id, cs3tbl.EffectType.EffectTypes.no_effect
         )
         self.assertEqual(entry.data.effects[4].data, [0, 0, 0])
         self.assertEqual(entry.data.strength, 20)

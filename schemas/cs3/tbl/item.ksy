@@ -4,7 +4,7 @@ meta:
   encoding: UTF-8
   imports:
     - /components/cs3/character
-    - /components/cs3/effects
+    - /components/cs3/effect
     - /components/cs3/item_type
     - /components/cs3/item_subtype
     - /components/cs3/target_type

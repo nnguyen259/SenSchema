@@ -44,23 +44,23 @@ class TestCS3Item(unittest.TestCase):
         self.assertEqual(entries[0].data.unknown_float_2, 100.0)
         self.assertEqual(entries[0].data.unknown_float_3, -100.0)
         self.assertEqual(
-            entries[0].data.effects[0].effect_id, cs3tbl.Effect.EffectType.prop_hp_up
+            entries[0].data.effects[0].type.type_id, cs3tbl.EffectType.EffectTypes.prop_hp_up
         )
         self.assertEqual(entries[0].data.effects[0].data, [50, 0, 0])
         self.assertEqual(
-            entries[0].data.effects[1].effect_id, cs3tbl.Effect.EffectType.cure_ailments
+            entries[0].data.effects[1].type.type_id, cs3tbl.EffectType.EffectTypes.cure_ailments
         )
         self.assertEqual(entries[0].data.effects[1].data, [75, 0, 0])
         self.assertEqual(
-            entries[0].data.effects[2].effect_id, cs3tbl.Effect.EffectType.no_effect
+            entries[0].data.effects[2].type.type_id, cs3tbl.EffectType.EffectTypes.no_effect
         )
         self.assertEqual(entries[0].data.effects[2].data, [0, 0, 0])
         self.assertEqual(
-            entries[0].data.effects[3].effect_id, cs3tbl.Effect.EffectType.no_effect
+            entries[0].data.effects[3].type.type_id, cs3tbl.EffectType.EffectTypes.no_effect
         )
         self.assertEqual(entries[0].data.effects[3].data, [0, 0, 0])
         self.assertEqual(
-            entries[0].data.effects[4].effect_id, cs3tbl.Effect.EffectType.no_effect
+            entries[0].data.effects[4].type.type_id, cs3tbl.EffectType.EffectTypes.no_effect
         )
         self.assertEqual(entries[0].data.effects[4].data, [0, 0, 0])
         self.assertEqual(entries[0].data.strength, 0)
@@ -111,23 +111,23 @@ class TestCS3Item(unittest.TestCase):
         self.assertEqual(entries[1].data.unknown_float_2, 100.0)
         self.assertEqual(entries[1].data.unknown_float_3, -100.0)
         self.assertEqual(
-            entries[1].data.effects[0].effect_id, cs3tbl.Effect.EffectType.no_effect
+            entries[1].data.effects[0].type.type_id, cs3tbl.EffectType.EffectTypes.no_effect
         )
         self.assertEqual(entries[1].data.effects[0].data, [0, 0, 0])
         self.assertEqual(
-            entries[1].data.effects[1].effect_id, cs3tbl.Effect.EffectType.crit_chance
+            entries[1].data.effects[1].type.type_id, cs3tbl.EffectType.EffectTypes.crit_chance
         )
         self.assertEqual(entries[1].data.effects[1].data, [60, 0, 0])
         self.assertEqual(
-            entries[1].data.effects[2].effect_id, cs3tbl.Effect.EffectType.no_effect
+            entries[1].data.effects[2].type.type_id, cs3tbl.EffectType.EffectTypes.no_effect
         )
         self.assertEqual(entries[1].data.effects[2].data, [0, 0, 0])
         self.assertEqual(
-            entries[1].data.effects[3].effect_id, cs3tbl.Effect.EffectType.no_effect
+            entries[1].data.effects[3].type.type_id, cs3tbl.EffectType.EffectTypes.no_effect
         )
         self.assertEqual(entries[1].data.effects[3].data, [0, 0, 0])
         self.assertEqual(
-            entries[1].data.effects[4].effect_id, cs3tbl.Effect.EffectType.no_effect
+            entries[1].data.effects[4].type.type_id, cs3tbl.EffectType.EffectTypes.no_effect
         )
         self.assertEqual(entries[1].data.effects[4].data, [0, 0, 0])
         self.assertEqual(entries[1].data.strength, 600)
@@ -176,7 +176,7 @@ class TestCS3Item(unittest.TestCase):
         self.assertEqual(entries[2].data.unknown_float_3, 0.0)
         for i in range(5):
             self.assertEqual(
-                entries[2].data.effects[i].effect_id, cs3tbl.Effect.EffectType.no_effect
+                entries[2].data.effects[i].type.type_id, cs3tbl.EffectType.EffectTypes.no_effect
             )
             self.assertEqual(entries[2].data.effects[i].data, [0, 0, 0])
         self.assertEqual(entries[2].data.strength, 0)
