@@ -6,8 +6,6 @@ doc: |
 
   Present in t_magic.tbl.
 seq:
-  - id: string_length
-    type: u2
   - id: skill_id
     type: u2
   - id: bo_effect_id_1
