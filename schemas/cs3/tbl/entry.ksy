@@ -15,6 +15,7 @@ meta:
     - qs_mons
     - slot_cost
     - slot_ep
+    - magic_bo
 seq:
   - id: header_name
     type: strz
@@ -36,6 +37,7 @@ seq:
         '"QSMons"': qs_mons
         "'SlotCost'": slot_cost
         "'SlotEp'": slot_ep
+        "'magicbo'": magic_bo
         _: generic
 types:
   generic:
