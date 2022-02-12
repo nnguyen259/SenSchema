@@ -50,4 +50,4 @@ seq:
     type: s4
   - id: count_amount
     type: u1
-  Might be s1
+    doc: could be an s1 value
