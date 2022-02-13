@@ -49,5 +49,5 @@ seq:
   - id: bo_effect_param_3_4
     type: s4
   - id: count_amount
-    type: u1
-    doc: could be an s1 value
+    type: u2
+    doc: could be an s2 value
