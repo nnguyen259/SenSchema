@@ -7,6 +7,20 @@ on:
   workflow_dispatch: # Allows running the workflow manually from the Actions tab
 
 jobs:
+  formatting:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+      - name: Install black
+        run: |
+          sudo apt-get install pip
+          pip install black
+      - name: Check python formatting
+        run: black --check --diff gen/*.py test/runtests.py test/tbl/*/*.py
+      - name: Check csv formatting
+        run: python3 normalize.py
+        working-directory: gen
   ubuntu:
     runs-on: ubuntu-latest
     steps:

@@ -15,9 +15,7 @@ def normalize(csvstring):
     # Input and output are strings.
     rows = list(csv.DictReader(io.StringIO(csvstring)))
     out = io.StringIO()
-    writer = csv.DictWriter(
-        out, rows[0].keys(), dialect="unix", quoting=csv.QUOTE_ALL
-    )
+    writer = csv.DictWriter(out, rows[0].keys(), dialect="unix", quoting=csv.QUOTE_ALL)
     writer.writeheader()
     writer.writerows(rows)
     return out.getvalue()
@@ -38,7 +36,6 @@ def normalize_if_necessary(fn):
 
 
 if __name__ == "__main__":
-    #files = ["cs3_effects.csv",]
     files = pathlib.Path(".").glob("*.csv")
 
     changed = 0
@@ -59,3 +56,7 @@ if __name__ == "__main__":
         print("1 file changed, done.")
     else:
         print(f"{changed} files changed, done.")
+
+    if changed:
+        # not necessarily an error, but it's helpful for CI
+        exit(1)
