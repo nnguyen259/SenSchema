@@ -1,0 +1,3 @@
+[submodule "test/3rdparty/kaitai_struct_python_runtime"]
+	path = test/3rdparty/kaitai_struct_python_runtime
+	url = https://github.com/kaitai-io/kaitai_struct_python_runtime.git

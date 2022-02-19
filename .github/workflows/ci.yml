@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  pull_request:
+    types: [ opened, reopened, edited ]
+
+  workflow_dispatch: # Allows running the workflow manually from the Actions tab
+
+jobs:
+  formatting:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+      - name: Install black
+        run: |
+          sudo apt-get install pip
+          pip install black
+      - name: Check python formatting
+        run: black --check --diff gen/*.py test/runtests.py test/tbl/*/*.py
+      - name: Check csv formatting
+        run: python3 normalize.py
+        working-directory: gen
+  ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+      - name: Init submodules
+        run: |
+          git submodule init
+          git submodule update
+      - name: Set up python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+      - name: Install kaitai struct compiler
+        run: |
+          curl -LO https://github.com/kaitai-io/kaitai_struct_compiler/releases/download/0.9/kaitai-struct-compiler_0.9_all.deb
+          echo de8f480bdc7f0d19863c54b0d42c47eed7db1bde6aeabccdca0327d99eef6f3b  kaitai-struct-compiler_0.9_all.deb > SHA256SUM
+          sha256sum -c SHA256SUM
+          sudo apt-get install ./kaitai-struct-compiler_0.9_all.deb
+      - name: Run tests
+        run: python3 runtests.py
+        working-directory: test
