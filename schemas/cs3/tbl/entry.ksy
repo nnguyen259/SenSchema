@@ -4,7 +4,7 @@ meta:
   encoding: UTF-8
   imports:
     - base_list
-    - magic_bo
+    - magicbo
     - master_quartz_base
     - master_quartz_data
     - master_quartz_dummy
@@ -44,3 +44,4 @@ types:
     seq:
       - id: data
         size: _parent.entry_length
+
