@@ -40,13 +40,13 @@ seq:
     type: s4
   - id: bo_effect_param_3_4
     type: s4
-  - id: bo_effect_id_4
+  - id: bo_effect_id_5
     type: u2
-  - id: bo_effect_param_1_4
+  - id: bo_effect_param_1_5
     type: s4
-  - id: bo_effect_param_2_4
+  - id: bo_effect_param_2_5
     type: s4
-  - id: bo_effect_param_3_4
+  - id: bo_effect_param_3_5
     type: s4
   - id: count_amount
     type: u2
