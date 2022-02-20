@@ -10,43 +10,43 @@ seq:
     type: u2
   - id: bo_effect_id_1
     type: u2
-  - id: bo_effect_param_1_1
+  - id: bo_effect_1_param_1
     type: s4
-  - id: bo_effect_param_2_1
+  - id: bo_effect_1_param_2
     type: s4
-  - id: bo_effect_param_3_1
+  - id: bo_effect_1_param_3
     type: s4
   - id: bo_effect_id_2
     type: u2
-  - id: bo_effect_param_1_2
+  - id: bo_effect_2_param_1
     type: s4
-  - id: bo_effect_param_2_2
+  - id: bo_effect_2_param_2
     type: s4
-  - id: bo_effect_param_3_2
+  - id: bo_effect_2_param_3
     type: s4
   - id: bo_effect_id_3
     type: u2
-  - id: bo_effect_param_1_3
+  - id: bo_effect_3_param_1
     type: s4
-  - id: bo_effect_param_2_3
+  - id: bo_effect_3_param_2
     type: s4
-  - id: bo_effect_param_3_3
+  - id: bo_effect_3_param_3
     type: s4
   - id: bo_effect_id_4
     type: u2
-  - id: bo_effect_param_1_4
+  - id: bo_effect_4_param_1
     type: s4
-  - id: bo_effect_param_2_4
+  - id: bo_effect_4_param_2
     type: s4
-  - id: bo_effect_param_3_4
+  - id: bo_effect_4_param_3
     type: s4
   - id: bo_effect_id_5
     type: u2
-  - id: bo_effect_param_1_5
+  - id: bo_effect_5_param_1
     type: s4
-  - id: bo_effect_param_2_5
+  - id: bo_effect_5_param_2
     type: s4
-  - id: bo_effect_param_3_5
+  - id: bo_effect_5_param_3
     type: s4
   - id: count_amount
     type: u2
