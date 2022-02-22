@@ -4,6 +4,7 @@ meta:
   encoding: UTF-8
   imports:
     - base_list
+    - magicbo
     - master_quartz_base
     - master_quartz_data
     - master_quartz_dummy
@@ -25,6 +26,7 @@ seq:
       switch-on: header_name
       cases:
         '"BaseList"': base_list
+        '"magicbo"': magic_bo
         '"MasterQuartzBase"': master_quartz_base
         '"MasterQuartzData"': master_quartz_data
         '"MasterQuartzDummy"': master_quartz_dummy
@@ -42,3 +44,4 @@ types:
     seq:
       - id: data
         size: _parent.entry_length
+
