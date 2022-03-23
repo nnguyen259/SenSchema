@@ -6,6 +6,8 @@ meta:
     - base_list
     - char_revise
     - game_difficulty
+    - item
+    - item_q
     - master_quartz_base
     - master_quartz_data
     - master_quartz_dummy
@@ -32,6 +34,8 @@ seq:
         '"BaseList"': base_list
         '"char_revise"': char_revise
         '"game_difficulty"': game_difficulty
+        '"item"': item
+        '"item_q"': item_q
         '"MasterQuartzBase"': master_quartz_base
         '"MasterQuartzData"': master_quartz_data
         '"MasterQuartzDummy"': master_quartz_dummy
