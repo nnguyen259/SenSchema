@@ -3,9 +3,11 @@
 from .cs3 import *
 from .element import *
 from .character import *
+from .difficulty import *
 
 __all__ = [
     "Cs3",
     "Element",
     "Character",
+    "Difficulty",
 ]
