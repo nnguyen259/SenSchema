@@ -26,20 +26,14 @@ with open("cs3_effects.csv") as csvfile:
 schema = """# This file has been automatically generated, do not edit.
 # See gen_cs3_effects.py for details.
 meta:
-  id: effect
+  id: effect_type
   endian: le
 seq:
-  - id: effect_id
+  - id: type_id
     type: u2
-    enum: effect_type
-    doc: |
-{doc}
-  - id: data
-    type: u4
-    repeat: expr
-    repeat-expr: 3
+    enum: effect_types
 enums:
-  effect_type:
+  effect_types:
 """
 
 variant_schema = """    {id}:
@@ -47,7 +41,7 @@ variant_schema = """    {id}:
       doc: {doc}
 """
 
-with open("../schemas/components/cs3/effects.ksy", "w") as outfile:
+with open("../schemas/components/cs3/effect_type.ksy", "w") as outfile:
     print(schema.format(doc=effects_doc), file=outfile, end="")
 
     for id, name, description in effects:
