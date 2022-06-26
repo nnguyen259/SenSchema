@@ -21,7 +21,7 @@ class TestCS3ItemQ(unittest.TestCase):
             entry.data.item_subtype.type_id,
             cs3tbl.ItemSubtype.ItemSubtypes.generic_subtype,
         )
-        self.assertEqual(entry.data.element, 4)
+        self.assertEqual(entry.data.element.element_id.value, 4)
         self.assertEqual(entry.data.quartz_type, cs3tbl.ItemQ.QuartzType.status_quartz)
         self.assertEqual(entry.data.rating, 2.0)
         self.assertEqual(entry.data.unknown_byte_1, 1)
