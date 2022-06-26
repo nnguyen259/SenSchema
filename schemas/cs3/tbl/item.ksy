@@ -8,7 +8,7 @@ meta:
     - /components/cs3/item_type
     - /components/cs3/item_subtype
     - /components/cs3/target_type
-  #  - /components/common/element
+    - /components/common/element
 doc: |
   This schema is very similar to the item_q schema, but some fields have a different interpretation, and item_q is longer by eight bytes. 
 seq:
@@ -24,28 +24,25 @@ seq:
     type: item_subtype
 
   - id: element
-    type: u1 # can't use element enum here because it's a u2
+    type: element
 
   - id: slash
     type: u1
     doc: |
-      Number of stars, from 0 to 4 (inclusive)
+      Unbalance rating, 0 (none) to 5 (SS rank)
   - id: thrust
     type: u1
     doc: |
-      Number of stars, from 0 to 4 (inclusive)
+      Unbalance rating, 0 (none) to 5 (SS rank)
   - id: pierce
     type: u1
     doc: |
-      Number of stars, from 0 to 4 (inclusive)
+      Unbalance rating, 0 (none) to 5 (SS rank)
   - id: strike
     type: u1
     doc: |
-      Number of stars, from 0 to 4 (inclusive)
-  - id: unknown_byte
-    type: u1
-    doc: |
-      Only nonzero for (some) weapons.
+      Unbalance rating, 0 (none) to 5 (SS rank)
+
   - id: target_type
     type: u1
 #      switch-on: 'item_type'

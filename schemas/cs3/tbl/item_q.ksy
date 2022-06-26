@@ -6,6 +6,7 @@ meta:
     - /components/cs3/effects
     - /components/cs3/item_subtype
     - /components/cs3/item_type
+    - /components/common/element
 doc: |
   This schema is very similar to the item schema, but some fields have a different interpretation, and item_q is longer by eight bytes.
 seq:
@@ -26,13 +27,13 @@ seq:
     doc: Always 0.
 
   - id: element
-    type: u1 # can't use element enum here because it's a u2
+    type: element
 
   - id: zeros_1
-    contents: [0x00, 0x00, 0x00, 0x00, 0x00]
+    contents: [0x00, 0x00, 0x00, 0x00]
     doc: |
       Zero bytes.
-      In the item schema these are unbalance ratings and some unknown weapon attribute.
+      In the item schema these are unbalance ratings.
       May be unused.
 
   - id: quartz_type

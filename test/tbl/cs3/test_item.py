@@ -28,12 +28,13 @@ class TestCS3Item(unittest.TestCase):
             entries[0].data.item_subtype.type_id,
             cs3tbl.ItemSubtype.ItemSubtypes.generic_subtype,
         )
-        self.assertEqual(entries[0].data.element, 0)
+        self.assertEqual(
+            entries[0].data.element.element_id, 256
+        )  # doesn't make sense, but it's the data
         self.assertEqual(entries[0].data.slash, 1)
         self.assertEqual(entries[0].data.thrust, 1)
         self.assertEqual(entries[0].data.pierce, 1)
-        self.assertEqual(entries[0].data.strike, 1)
-        self.assertEqual(entries[0].data.unknown_byte, 0)
+        self.assertEqual(entries[0].data.strike, 0)
         self.assertEqual(
             entries[0].data.target_type,
             cs3tbl.TargetType.TargetTypes.target_single_no_movement.value,
@@ -95,12 +96,15 @@ class TestCS3Item(unittest.TestCase):
             entries[1].data.item_subtype.type_id,
             cs3tbl.ItemSubtype.ItemSubtypes.gaius_weapon_type,
         )
-        self.assertEqual(entries[1].data.element, 0)
-        self.assertEqual(entries[1].data.slash, 1)
-        self.assertEqual(entries[1].data.thrust, 4)
-        self.assertEqual(entries[1].data.pierce, 5)
-        self.assertEqual(entries[1].data.strike, 2)
-        self.assertEqual(entries[1].data.unknown_byte, 123)
+        self.assertEqual(
+            entries[1].data.element.element_id, 256
+        )  # doesn't make sense, but it's the data
+        self.assertEqual(entries[1].data.slash, 4)
+        self.assertEqual(entries[1].data.thrust, 5)
+        self.assertEqual(entries[1].data.pierce, 2)
+        self.assertEqual(
+            entries[1].data.strike, 123
+        )  # doesn't make sense, but it's the data
         self.assertEqual(
             entries[1].data.target_type,
             cs3tbl.TargetType.TargetTypes.target_single_no_movement.value,
@@ -162,12 +166,11 @@ class TestCS3Item(unittest.TestCase):
             entries[2].data.item_subtype.type_id,
             cs3tbl.ItemSubtype.ItemSubtypes.generic_subtype,
         )
-        self.assertEqual(entries[2].data.element, 6)
+        self.assertEqual(entries[2].data.element.element_id.value, 6)
         self.assertEqual(entries[2].data.slash, 0)
         self.assertEqual(entries[2].data.thrust, 0)
         self.assertEqual(entries[2].data.pierce, 0)
         self.assertEqual(entries[2].data.strike, 0)
-        self.assertEqual(entries[2].data.unknown_byte, 0)
         self.assertEqual(entries[2].data.target_type, 0)
         self.assertEqual(entries[2].data.range, 0.0)
         self.assertEqual(entries[2].data.area, 0)
