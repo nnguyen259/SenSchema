@@ -3,6 +3,7 @@ meta:
   endian: le
   encoding: UTF-8
   imports:
+    - atbonus
     - base_list
     - char_revise
     - game_difficulty
@@ -31,6 +32,7 @@ seq:
     type:
       switch-on: header_name
       cases:
+        '"AtBonus"': atbonus
         '"BaseList"': base_list
         '"char_revise"': char_revise
         '"game_difficulty"': game_difficulty
