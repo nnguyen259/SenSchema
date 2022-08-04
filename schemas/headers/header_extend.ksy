@@ -2,12 +2,12 @@ meta:
   id: header_extend
   endian: le
 seq:
-  - id: num_header
+  - id: num_headers
     type: u4
   - id: headers
     type: header_info
     repeat: expr
-    repeat-expr: num_header
+    repeat-expr: num_headers
 types:
   header_info:
     seq:
